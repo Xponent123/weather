@@ -7,7 +7,7 @@ engine.setProperty("rate",130)
 engine.say("enter city")
 engine.runAndWait()
 city=input("enter city: ")
-url = f"http://api.weatherstack.com/current?access_key=yourkeyquery={city}"
+url = f"http://api.weatherstack.com/current?access_key=yourkeyquery={city}" # add your api key instead of yourkey
 r=requests.get(url)
 dic = json.loads(r.text)
 engine.say(f"weather report of {city} is")
